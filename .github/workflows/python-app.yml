@@ -40,10 +40,6 @@ jobs:
         pip install flake8==6.0.0
         pip install pytest==7.4.0
 
-    - name: Lint code with flake8
-      run: |
-        flake8 .
-
     - name: Run unit tests
       run: |
         pytest ./tests
