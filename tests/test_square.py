@@ -1,6 +1,5 @@
-# content of test_square.py
 
-from square import area, perimeter
+from ..square import area, perimeter
 
 def test_area():
     assert area(1) == 1
