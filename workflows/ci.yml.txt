@@ -35,11 +35,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        echo "Installation complete"
 
     - name: Run unit tests
-      run: pytest
+      run: |
+        pytest --maxfail=1 --disable-warnings -q || exit 1
 
     - name: Lint code with flake8
       run: |
         pip install flake8
-        flake8 .
+        flake8 . || exit 1
