@@ -1,3 +1,5 @@
+name: CI Workflow
+
 on:
   push:
     branches:
@@ -41,13 +43,10 @@ jobs:
     - name: Lint code with flake8
       run: |
         flake8 .
-        
-        
+
     - name: Run unit tests with pytest
-    
       run: |
-          pytest tests/test_circle.py
-          pytest tests/test_square.py
+        pytest tests/
 
     - name: Check coverage
       run: |
