@@ -43,7 +43,7 @@ jobs:
         flake8 .
 
     - name: Run unit tests with pytest
-      working-directory: /home/runner/work/geometric_lib/geometric_lib
+      working-directory: /home/runner/work/geometric_lib/
       run: |
           pytest tests/
 
