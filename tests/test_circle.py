@@ -1,5 +1,5 @@
 import pytest
-from ..square import area, perimeter
+from ..circle import area, perimeter
 
 def test_area_positive():
     assert area(4) == 16
