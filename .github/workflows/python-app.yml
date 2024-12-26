@@ -43,8 +43,9 @@ jobs:
         flake8 .
 
     - name: Run unit tests with pytest
+      working-directory: ./geometric_lib
       run: |
-        pytest ..tests/
+        pytest tests/
 
     - name: Check coverage
       run: |
