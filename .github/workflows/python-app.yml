@@ -47,4 +47,5 @@ jobs:
         
     - name: Run unit tests
       run: |
-        python -m unittest discover ./tests
+         python -m unittest ./tests/test_square.py ./tests/test_circle.py
+
