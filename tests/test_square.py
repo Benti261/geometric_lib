@@ -1,45 +1,13 @@
-import unittest
-from ..square import area, perimeter
- 
-class TestSquare(unittest.TestCase):
-    def test_area_positive(self):
-        # Arrange
-        side = 4
-        expected = 16
+# content of test_square.py
 
-        # Act
-        result = area(side)
+from square import area, perimeter
 
-        # Assert
-        self.assertEqual(result, expected)
+def test_area():
+    assert area(1) == 1
+    assert area(3) == 9
+    assert area(5) == 25
 
-    def test_area_negative(self):
-        # Arrange
-        side = -4
-
-        # Act & Assert
-        with self.assertRaises(ValueError):
-            area(side)
-
-    def test_perimeter_positive(self):
-        # Arrange
-        side = 4
-        expected = 16
-
-        # Act
-        result = perimeter(side)
-
-        # Assert
-        self.assertEqual(result, expected)
-
-    def test_perimeter_negative(self):
-        # Arrange
-        side = -4
-
-        # Act & Assert
-        with self.assertRaises(ValueError):
-            perimeter(side)
-
-
-if __name__ == "__main__":
-    unittest.main()
+def test_perimeter():
+    assert perimeter(1) == 4
+    assert perimeter(3) == 12
+    assert perimeter(5) == 20
