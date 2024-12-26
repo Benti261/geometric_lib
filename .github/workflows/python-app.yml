@@ -28,6 +28,7 @@ jobs:
         echo "Full Name: ${{ env.FULL_NAME }}"
         echo "Group Number: ${{ env.GROUP_NUMBER }}"
         echo "GitHub Username: ${{ github.actor }}"
+        ls -la
 
 
     - name: Install dependencies from requirements.txt
