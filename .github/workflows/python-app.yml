@@ -44,7 +44,7 @@ jobs:
 
     - name: Run unit tests with pytest
       run: |
-        pytest tests/
+        pytest ..tests/
 
     - name: Check coverage
       run: |
