@@ -1,46 +1,16 @@
-import unittest
+import pytest
 from circle import area, perimeter
 
+def test_area_positive():
+    assert area(3) == pytest.approx(28.274333882308138, rel=1e-9)
 
-class TestCircle(unittest.TestCase):
-    def test_area_positive(self):
-        # Arrange
-        radius = 5
-        expected = 78.53981633974483
+def test_area_negative():
+    with pytest.raises(ValueError):
+        area(-3)
 
-        # Act
-        result = area(radius)
+def test_perimeter_positive():
+    assert perimeter(3) == pytest.approx(18.84955592153876, rel=1e-9)
 
-        # Assert
-        self.assertAlmostEqual(result, expected, places=5)
-
-    def test_area_negative(self):
-        # Arrange
-        radius = -5
-
-        # Act & Assert
-        with self.assertRaises(ValueError):
-            area(radius)
-
-    def test_perimeter_positive(self):
-        # Arrange
-        radius = 5
-        expected = 31.41592653589793
-
-        # Act
-        result = perimeter(radius)
-
-        # Assert
-        self.assertAlmostEqual(result, expected, places=5)
-
-    def test_perimeter_negative(self):
-        # Arrange
-        radius = -5
-
-        # Act & Assert
-        with self.assertRaises(ValueError):
-            perimeter(radius)
-
-
-if __name__ == "__main__":
-    unittest.main()
+def test_perimeter_negative():
+    with pytest.raises(ValueError):
+        perimeter(-3)
