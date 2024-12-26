@@ -44,8 +44,8 @@ jobs:
         
     - name: Cat directory
       run: |
-        cat ..
-        cat
+        ls ..
+        ls
         
     - name: Run unit tests with pytest
       working-directory: /home/runner/work/geometric_lib/
