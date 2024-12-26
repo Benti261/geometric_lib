@@ -44,7 +44,6 @@ jobs:
         
     - name: Cat directory
       run: |
-        ls ..
         ls
         
     - name: Run unit tests with pytest
