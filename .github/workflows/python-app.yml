@@ -26,6 +26,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
+      
+    - name: Display personal info
       run: |
         echo "Full Name: ${{ env.FULL_NAME }}"
         echo "Group Number: ${{ env.GROUP_NUMBER }}"
