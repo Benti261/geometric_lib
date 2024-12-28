@@ -23,7 +23,9 @@ jobs:
       GROUP_NUMBER: "M3112"
 
     steps:
-    - name: Display personal info
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
       run: |
         echo "Full Name: ${{ env.FULL_NAME }}"
         echo "Group Number: ${{ env.GROUP_NUMBER }}"
