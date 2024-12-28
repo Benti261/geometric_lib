@@ -40,7 +40,7 @@ jobs:
       run: |
         dir
         pwd
-        pytest ./tests/
+        pytest /home/runner/work/geometric_lib/geometric_lib/tests/
 
     - name: Check coverage
       run: |
